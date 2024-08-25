@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - DecWork</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your general CSS file -->
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="DecWork.jpg" alt="DecWork Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="Homepage1.1.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="group_projects.html">Group Projects</a></li>
+                    <li><a href="attendance.html">Attendance</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div id="profileIcon" class="profile-icon">
+                <img src="Profile_Picture.jpeg" alt="Profile Icon">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="contactSection" class="contact-section">
+            <div class="contact-content">
+                <h2>Contact Us</h2>
+                <p>Twitter/X: </p>
+                <div class="contact-info">
+                    <a href="https://X.com/@NeverNot845750" target="_blank" class="x-link">
+                        <span>https://X.com/@NeverNot845750</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Profile Page Modal -->
+    <div id="profilePage" class="profile-page">
+        <div class="profile-content">
+            <span class="close-btn" id="closeProfile">&times;</span>
+            <img src="Profile_Picture.jpeg" alt="Profile Icon" class="profile-pic">
+            <h2>Profile</h2>
+            <ul class="profile-menu">
+                <li id="joinCorporate">Join a Corporate <span class="new-tag">NEW</span></li>
+                <li>Become a Freelancer <span class="new-tag">NEW</span></li>
+                <li>Become a Partner <span class="new-tag">NEW</span></li>
+                <li>Apply as a Business Owner</li>
+                <li>Help & Support</li>
+                <li>Settings</li>
+                <li>Logout</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Profile modal functionality
+        const profileIcon = document.getElementById('profileIcon');
+        const profilePage = document.getElementById('profilePage');
+        const closeProfile = document.getElementById('closeProfile');
+
+        if (profileIcon && profilePage && closeProfile) {
+            profileIcon.addEventListener('click', function () {
+                profilePage.style.display = 'flex';
+                document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+            });
+
+            closeProfile.addEventListener('click', function () {
+                profilePage.style.display = 'none';
+                document.body.style.overflow = ''; // Restore scrolling
+            });
+        }
+
+        // Optional: Close modal if clicking outside of the modal content
+        window.addEventListener('click', function (e) {
+            if (e.target === profilePage) {
+                profilePage.style.display = 'none';
+                document.body.style.overflow = ''; // Restore scrolling
+            }
+        });
+    </script>
+</body>
+</html>
